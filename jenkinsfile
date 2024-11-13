@@ -1,9 +1,15 @@
 pipeline {
     agent any
+
+    environment{
+        VERSION_NAME:"1.111"
+    }
+
     stages{
         stage("compile"){
             steps{
                 bat 'javac Test.java'
+                echo "its env version name : ${VERSION_NAME}"
             }
         }
 
