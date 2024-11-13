@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages{
+        stage("compile"){
+           javac Test.java
+        }
+        stage("run"){
+            steps{
+                java Test
+            }
+        }
+    }
+}
