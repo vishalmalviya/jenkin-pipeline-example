@@ -13,4 +13,16 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            echo "Always"
+        }
+        success {
+            echo "its success"
+        }
+        failure {
+            echo "its failure"
+        }
+    }
 }
