@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages{
         stage("compile"){
-           javac Test.java
+            steps{
+                javac Test.java
+            }
         }
         stage("run"){
             steps{
